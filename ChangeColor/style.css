@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(#7474BF, #348AC7);
+    color: aliceblue;
+    font-family: Open Sans, Helvetica, sans-serif;
+}
+h1 {
+    margin: auto;
+}
+button {
+    text-align: center;
+    width: 300px;
+    margin: auto;
+    height: 50px;
+    font-size: x-large;
+}
+.color1 {
+    background: linear-gradient(#5F2C82, #49A09D);
+}
+.color2 {
+    background: linear-gradient(#C04848, #480048);
+}
+.color3 {
+    background: linear-gradient(#EC6F66, #F3A183);
+}
+.color4 {
+    background: linear-gradient(#E43A15, #E65245);
+}
+.color5 {
+    background: linear-gradient(#ECE9E6, #FFFFFF);
+}
+.color6 {
+    background: linear-gradient(#283048, #859398);
+}
+.color7 {
+    background: linear-gradient(#24C6DC, #514A9D);
+}
+.color8 {
+    background: linear-gradient(#ED4264, #FFEDBC);
+}
+.color9 {
+    background: linear-gradient(#DC2424, #4A569D);
+}
+.color10 {
+    background: linear-gradient(#7474BF, #348AC7);
+}
