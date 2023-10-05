@@ -5,9 +5,11 @@ body {
     background: linear-gradient(#7474BF, #348AC7);
     color: aliceblue;
     font-family: Open Sans, Helvetica, sans-serif;
+    transition: 1s;
 }
 h1 {
     margin: auto;
+    transition: 1s;
 }
 button {
     text-align: center;
