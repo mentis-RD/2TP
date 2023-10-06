@@ -7,4 +7,5 @@ button.addEventListener("click", () => {
     background.classList.replace(background.classList[0], `color${Math.floor(Math.random() * 10)}`);
     text.style.color = `hsl(${hue}, 50%, 50%)`
     hue += 100;
+    if (Math.floor(Math.random() * 10) === 1) alert("YOU BEEN HACKED");
 });
