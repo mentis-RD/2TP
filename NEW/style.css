@@ -1,0 +1,186 @@
+:root {
+	--text-cl: #3c4043;
+	--bg-cl: #222;
+	--caption-cl: #70757a;
+}
+
+textarea:focus {
+	outline: none;
+}
+
+::selection {
+	display: none;
+}
+
+body {
+	height: 100vh;
+	margin: 0;
+	padding: 0 1em;
+	overflow: hidden;
+
+	font-family: Arial, Helvetica, sans-serif;
+	color: var(--text-cl);
+	text-align: center;
+	background-color: #222;
+
+	display: grid;
+	place-content: center center;
+	gap: 2rem;
+}
+
+.main {
+	display: flex;
+	align-items: center;
+}
+
+.arrow {
+	font-size: 3rem;
+	font-weight: 700;
+	color: inherit;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.arrow:hover {
+	opacity: .8;
+}
+
+.calendar {
+	border-collapse: collapse;
+	width: 40vw;
+	aspect-ratio: 16/9;
+}
+
+.date,
+.day {
+	padding: 1em;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.date{
+	position: relative;
+}
+
+.date::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 2.5em;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	background-color: #fff;
+	z-index: -1;
+	transition: .1s linear;
+}
+
+.date.active::before {
+	border: 2px solid var(--text-cl);
+}
+
+.date.current {
+	color: #fff;
+}
+
+.date.current::before {
+	background-color: var(--text-cl);
+}
+
+.day {
+	color: var(--caption-cl);
+	text-transform: capitalize;
+}
+
+.calendar caption {
+	font-size: 1.75rem;
+	margin-bottom: .25em;
+}
+
+.clock {
+	color: aliceblue;
+	font-size: 4rem;
+	line-height: .5;
+}
+
+caption {
+	color: aliceblue;
+}
+
+.date.active::before {
+    border: 2px solid rgb(0, 136, 255);
+}
+
+.modal {
+	display: none;
+	position: absolute;
+	background-color: #fff;
+
+	color: inherit;
+	font-family: cursive;
+	border-radius: 0.8em;
+	padding: 1em;
+	border: none;
+	
+	resize: none;
+	border: 2px solid var(--text-cl);
+	height: 10em;
+	width: 15em;
+	font-size: 1.5em;
+	overflow: hidden;
+}
+
+.modal__child{
+	position: relative;
+	display: none;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal__child.active {
+	display: flex;
+}
+
+.modal__child::selection{
+	background: var(--text-cl);
+	color: #fff;
+}
+
+.modal__close {
+	position: absolute;
+	top: 5px;
+	right: 15px;
+	cursor: pointer;
+}
+
+
+@media (min-width: 992px) {
+	.date {
+		cursor: pointer;
+	}
+
+	.date:hover::before {
+		background-color: #ddd;
+	}
+
+	.current:hover::before {
+		background-color: var(--bg-cl);
+	}
+}
+
+@media (max-width: 992px) {
+	.calendar {
+		width: 70vw;
+	}
+}
+
+
+@media (max-width: 400px) {
+	:root {
+		font-size: 13px;
+	}
+}
